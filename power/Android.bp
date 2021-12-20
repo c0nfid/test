@@ -1,0 +1,17 @@
+cc_binary {
+    name: "vendor.aospa.power-service.meizu_sdm845",
+    defaults: ["powerfeature_defaults"],
+    relative_install_path: "hw",
+    init_rc: ["vendor.aospa.power-service.meizu_sdm845.rc"],
+    vendor: true,
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "liblog",
+        "vendor.aospa.power-ndk_platform",
+    ],
+    srcs: [
+        "PowerFeature.cpp",
+        "main.cpp",
+    ],
+}
